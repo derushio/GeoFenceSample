@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeoFenceSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoFenceStatus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeE-dJ-aMN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPSStatus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7L-M6-7Rs">
+                                <rect key="frame" x="-1" y="49" width="376" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8v-ko-HGT" userLabel="LatView">
+                                <rect key="frame" x="0.0" y="78" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoFenceLat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9b-E1-lXw">
+                                        <rect key="frame" x="8" y="4" width="150" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJb-RU-vct">
+                                        <rect key="frame" x="217" y="4" width="150" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="eJb-RU-vct" secondAttribute="centerY" id="Vtx-3a-QU7"/>
+                                    <constraint firstItem="eJb-RU-vct" firstAttribute="height" secondItem="J8v-ko-HGT" secondAttribute="height" multiplier="0.8" id="X4R-Un-xVC"/>
+                                    <constraint firstItem="g9b-E1-lXw" firstAttribute="width" secondItem="J8v-ko-HGT" secondAttribute="width" multiplier="0.4" id="YO0-YJ-GMT"/>
+                                    <constraint firstItem="g9b-E1-lXw" firstAttribute="leading" secondItem="J8v-ko-HGT" secondAttribute="leading" constant="8" id="YUB-5w-cVl"/>
+                                    <constraint firstAttribute="trailing" secondItem="eJb-RU-vct" secondAttribute="trailing" constant="8" id="l7z-pr-RJz"/>
+                                    <constraint firstItem="g9b-E1-lXw" firstAttribute="height" secondItem="J8v-ko-HGT" secondAttribute="height" multiplier="0.8" id="lMr-Th-JVD"/>
+                                    <constraint firstAttribute="centerY" secondItem="g9b-E1-lXw" secondAttribute="centerY" id="mD8-uA-eFx"/>
+                                    <constraint firstItem="eJb-RU-vct" firstAttribute="width" secondItem="J8v-ko-HGT" secondAttribute="width" multiplier="0.4" id="wFj-ih-tuX"/>
+                                    <constraint firstAttribute="height" constant="40" id="wjs-hC-6lP"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trI-9X-BiE" userLabel="LngView">
+                                <rect key="frame" x="1" y="126" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoFenceLng" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldI-96-fpf">
+                                        <rect key="frame" x="8" y="4" width="150" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="95j-Zv-6FA">
+                                        <rect key="frame" x="217" y="4" width="150" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="95j-Zv-6FA" secondAttribute="centerY" id="7BZ-bl-vlP"/>
+                                    <constraint firstItem="ldI-96-fpf" firstAttribute="height" secondItem="trI-9X-BiE" secondAttribute="height" multiplier="0.8" id="9bh-ji-dhd"/>
+                                    <constraint firstItem="95j-Zv-6FA" firstAttribute="height" secondItem="trI-9X-BiE" secondAttribute="height" multiplier="0.8" id="AbF-7a-DLQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="Dgl-f4-wF0"/>
+                                    <constraint firstItem="ldI-96-fpf" firstAttribute="width" secondItem="trI-9X-BiE" secondAttribute="width" multiplier="0.4" id="J1A-xi-zM0"/>
+                                    <constraint firstAttribute="trailing" secondItem="95j-Zv-6FA" secondAttribute="trailing" constant="8" id="gkz-P8-E0q"/>
+                                    <constraint firstItem="ldI-96-fpf" firstAttribute="leading" secondItem="trI-9X-BiE" secondAttribute="leading" constant="8" id="qyy-FT-JIl"/>
+                                    <constraint firstAttribute="centerY" secondItem="ldI-96-fpf" secondAttribute="centerY" id="rJq-WC-c2q"/>
+                                    <constraint firstItem="95j-Zv-6FA" firstAttribute="width" secondItem="trI-9X-BiE" secondAttribute="width" multiplier="0.4" id="sCR-hC-0f6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFc-Qv-VaW" userLabel="RadiusView">
+                                <rect key="frame" x="0.0" y="174" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoFenceRadius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VO7-YN-v5J">
+                                        <rect key="frame" x="8" y="4" width="150" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Gi-sx-s8V">
+                                        <rect key="frame" x="217" y="4" width="150" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="VO7-YN-v5J" firstAttribute="height" secondItem="YFc-Qv-VaW" secondAttribute="height" multiplier="0.8" id="ONm-RT-2iC"/>
+                                    <constraint firstItem="VO7-YN-v5J" firstAttribute="width" secondItem="YFc-Qv-VaW" secondAttribute="width" multiplier="0.4" id="PL7-dG-Axw"/>
+                                    <constraint firstAttribute="height" constant="40" id="dAq-fn-Ufi"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Gi-sx-s8V" secondAttribute="trailing" constant="8" id="eoP-j0-vy9"/>
+                                    <constraint firstItem="4Gi-sx-s8V" firstAttribute="width" secondItem="YFc-Qv-VaW" secondAttribute="width" multiplier="0.4" id="gYs-p8-Qnk"/>
+                                    <constraint firstItem="VO7-YN-v5J" firstAttribute="leading" secondItem="YFc-Qv-VaW" secondAttribute="leading" constant="8" id="ily-gY-ISf"/>
+                                    <constraint firstAttribute="centerY" secondItem="VO7-YN-v5J" secondAttribute="centerY" id="kGP-8f-1qh"/>
+                                    <constraint firstItem="4Gi-sx-s8V" firstAttribute="height" secondItem="YFc-Qv-VaW" secondAttribute="height" multiplier="0.8" id="pnj-ht-fZc"/>
+                                    <constraint firstAttribute="centerY" secondItem="4Gi-sx-s8V" secondAttribute="centerY" id="yoA-Dt-VRv"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-n6-o07">
+                                <rect key="frame" x="-1" y="222" width="376" height="30"/>
+                                <state key="normal" title="StartGeoFence">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onStartGeoFenceClick:" destination="BYZ-38-t0r" eventType="touchDown" id="kfU-wd-1xI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pqf-n6-o07" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="1ib-tN-jeW"/>
+                            <constraint firstAttribute="width" secondItem="LeE-dJ-aMN" secondAttribute="width" id="255-Wt-eNr"/>
+                            <constraint firstItem="YFc-Qv-VaW" firstAttribute="top" secondItem="trI-9X-BiE" secondAttribute="bottom" constant="8" id="CLz-tQ-o3D"/>
+                            <constraint firstItem="LeE-dJ-aMN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Clk-Z8-qHd"/>
+                            <constraint firstItem="J8v-ko-HGT" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DCZ-n2-wXx"/>
+                            <constraint firstItem="trI-9X-BiE" firstAttribute="top" secondItem="J8v-ko-HGT" secondAttribute="bottom" constant="8" id="KSa-K1-dVT"/>
+                            <constraint firstAttribute="centerX" secondItem="pqf-n6-o07" secondAttribute="centerX" constant="0.5" id="KhU-Py-vHI"/>
+                            <constraint firstItem="d7L-M6-7Rs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Mat-R7-2Ew"/>
+                            <constraint firstAttribute="centerX" secondItem="d7L-M6-7Rs" secondAttribute="centerX" id="VSr-Hc-UXy"/>
+                            <constraint firstItem="pqf-n6-o07" firstAttribute="top" secondItem="YFc-Qv-VaW" secondAttribute="bottom" constant="8" id="W6v-nF-shO"/>
+                            <constraint firstAttribute="centerX" secondItem="LeE-dJ-aMN" secondAttribute="centerX" id="YA3-jO-1ky"/>
+                            <constraint firstAttribute="width" secondItem="trI-9X-BiE" secondAttribute="width" id="azg-UV-IMa"/>
+                            <constraint firstAttribute="centerX" secondItem="J8v-ko-HGT" secondAttribute="centerX" id="eZi-YW-cMc"/>
+                            <constraint firstAttribute="centerX" secondItem="YFc-Qv-VaW" secondAttribute="centerX" id="h3S-dA-wp6"/>
+                            <constraint firstItem="YFc-Qv-VaW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jZH-vp-o2D"/>
+                            <constraint firstAttribute="centerX" secondItem="trI-9X-BiE" secondAttribute="centerX" id="o1y-FF-G1a"/>
+                            <constraint firstItem="d7L-M6-7Rs" firstAttribute="top" secondItem="LeE-dJ-aMN" secondAttribute="bottom" constant="8" id="tbj-P1-pSf"/>
+                            <constraint firstItem="J8v-ko-HGT" firstAttribute="top" secondItem="d7L-M6-7Rs" secondAttribute="bottom" constant="8" id="yup-fy-qWL"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="geoFenceStatusLabel" destination="LeE-dJ-aMN" id="uxS-dR-OHV"/>
+                        <outlet property="gpsStatusLabel" destination="d7L-M6-7Rs" id="gK3-gf-jdg"/>
+                        <outlet property="latEdit" destination="eJb-RU-vct" id="vob-1U-dyW"/>
+                        <outlet property="lngEdit" destination="95j-Zv-6FA" id="0uC-NY-2TR"/>
+                        <outlet property="radiusEdit" destination="4Gi-sx-s8V" id="O8G-XI-FRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="273.5" y="440.5"/>
+        </scene>
+    </scenes>
+</document>
